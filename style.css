@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    /* Primary Colors */
+
+    --clr-red: 0, 100%, 67%;
+    --clr-yellow: 39, 100%, 56%;
+    --clr-teal: 166, 100%, 37%;
+    --clr-blue: 234, 85%, 45%;
+
+    /* Gradient Colors */
+    --clr-slate-blue: hsla(252, 100%, 67%);
+    --clr-royal-blue: hsla(241, 81%, 54%);
+    --clr-violet-blue: hsla(256, 72%, 46%, 1);
+    --clr-persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* Neutral Colors */
+    --clr-white: 0, 0%, 100%;
+    --clr-pale-blue: 221, 100%, 96%;
+    --clr-lavender: 241, 100%, 89%;
+    --clr-gray-blue: 224, 30%, 27%;
+
+    /* Typography */
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --fw-bolder: 800;
+}
+
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 1rem;
+    color: hsl(var(--clr-lavender));
+    background-color: hsl(var(--clr-pale-blue));
+    height: 100vh;
+    display: grid;
+    align-items: center;
+}
+
+.container{
+    background-color: hsl(var(--clr-white));
+    max-width: 736px;
+    margin: 0 auto;
+}
+
+.your-result{
+    display: grid;
+    gap: 1.5rem;
+    text-align: center;
+    padding: 1.5rem 3.5625rem 2.5rem 3.5625rem ;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background: linear-gradient(0deg, var(--clr-royal-blue) 0,  var(--clr-slate-blue) 100%);
+}
+
+h1{
+    font-size: 1.125rem;
+}
+
+.your-result h2{
+    color: hsl(var(--clr-white));
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.final-score{
+    font-size: 3.5rem;
+    font-weight: var(--fw-bolder);
+    color: hsl(var(--clr-white));
+}
+
+.overall-result{
+    background: linear-gradient(0deg, var(--clr-persian-blue) 0,  var(--clr-violet-blue) 100%);
+    height: 140px;
+    width: 140px;
+    border-radius: 100px;
+    margin: 0 auto;
+    font-weight: var(--fw-bold);
+    display: grid;
+    align-content: center;
+}
+
+.overall-result p{
+    opacity: .51;
+}
+
+.summary{
+    background-color: hsl(var(--clr-white));
+    padding: 1.5rem 1.875rem 1.875rem 1.875rem;
+}
+
+.summary h2{
+    color: hsl(var(--clr-gray-blue));
+    font-size: 1.125rem;
+}
+
+.score-containers{
+    margin: 1.5rem 0;
+}
+
+.flex-container{
+    border-radius: .75rem;
+    margin-bottom: 1rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.125rem 1rem;
+}
+
+.test{
+    display: flex;
+    align-items: center;
+}
+
+.test img{
+    margin-right: .75rem;
+}
+
+.score{
+    font-weight: var(--fw-bold);
+}
+
+.score p{
+    color: hsla(var(--clr-gray-blue), .5)
+}
+
+.score span{
+    color: hsla(var(--clr-gray-blue))
+}
+
+.reaction{
+    background-color: hsla(var(--clr-red), .05);
+    color: hsla(var(--clr-red));
+}
+
+.memory{
+    background-color: hsla(var(--clr-yellow), .05);
+    color: hsla(var(--clr-yellow));
+}
+
+.verbal{
+    background-color: hsla(var(--clr-teal), .05);
+    color: hsla(var(--clr-teal));
+}
+
+.visual{
+    background-color: hsla(var(--clr-blue), .05);
+    color: hsla(var(--clr-blue));
+}
+
+button{
+    width: 100%;
+    height: 3.5rem;
+    background-color: hsl(var(--clr-gray-blue));
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.125rem;
+    font-weight: var(--fw-bold);
+    color: hsl(var(--clr-white));
+    border: none;
+    border-radius: 100px;
+}
+
+button:hover{
+    background: linear-gradient(0deg, var(--clr-royal-blue) 0,  var(--clr-slate-blue) 100%);
+}
+
+@media (min-width: 736px){
+
+    .container{
+        border-radius: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .your-result{
+        border-radius: 2rem;
+        gap: 2.1875rem;
+        padding: 2.375rem 3.375rem 3.4rem 3.375rem;
+    }
+
+    .your-result h2{
+        margin-bottom: 13px;
+        font-size: 2rem;
+    }
+
+    .summary h2{
+        font-size: 1.5rem;
+    }
+
+    .overall-result{
+        height: 200px;
+        width: 200px;
+        margin-bottom: -7px;
+    }
+
+    .final-score{
+        font-size: 4.5rem;
+    }
+
+    .overall-result p{
+        font-size: 1.125rem;
+    }
+
+    .performance{
+        font-size: 1.125rem;
+        line-height: auto;
+    }
+
+    .summary{
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        padding: 2.375rem 2.5rem 2.875rem 2.5rem;
+    }
+
+    .score-containers{
+        margin: 1.75rem 0 2.5625rem 0;
+    }
+
+    .flex-container{
+        font-size: 1.125rem;
+    }
+}
